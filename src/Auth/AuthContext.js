@@ -1,11 +1,15 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, createContext, useEffect } from 'react';
 import { useAuth } from './useAuth';
 
 const AuthContext = createContext();
 
+const NAME_TOKEN = 'token';
+
 function AuthProvider({ children }) {
-  const [authenticated, setAuthenticated] = useState(false);
   const auth = useAuth();
+
+  const [authenticated, setAuthenticated] = useState(true);
   const { data, error } = auth;
 
   const handleLogin = (data) => {
@@ -15,13 +19,19 @@ function AuthProvider({ children }) {
   const handleLogout = (e) => {
     e.preventDefault();
     setAuthenticated(false);
+    localStorage.removeItem(NAME_TOKEN);
   };
 
   useEffect(() => {
-    if (error === '' && data.accessToken) {
+    const token = localStorage.getItem(NAME_TOKEN);
+    if (token) {
       setAuthenticated(true);
+    } else if (error === '' && data.accessToken) {
+      setAuthenticated(true);
+      !token && localStorage.setItem(NAME_TOKEN, data.accessToken);
     } else {
       setAuthenticated(false);
+      localStorage.removeItem(NAME_TOKEN);
     }
   }, [data, error]);
 
