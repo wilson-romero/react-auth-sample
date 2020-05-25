@@ -24,9 +24,9 @@ function Login() {
       Login
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
-          type='text'
-          placeholder='Username'
-          name='username'
+          type='email'
+          placeholder='email'
+          name='email'
           ref={register}
         />
         <input
@@ -34,6 +34,7 @@ function Login() {
           placeholder='Password'
           name='password'
           ref={register}
+          autoComplete='true'
         />
         <button type='submit'>submit</button>
       </form>
