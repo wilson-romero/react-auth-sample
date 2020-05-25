@@ -10,16 +10,20 @@ function AuthProvider({ children }) {
   const auth = useAuth();
 
   const [authenticated, setAuthenticated] = useState(true);
+
   const { data, error } = auth;
 
   const handleLogin = (data) => {
     auth.signIn(data);
   };
 
-  const handleLogout = (e) => {
-    e.preventDefault();
+  const handleLogout = () => {
     setAuthenticated(false);
     localStorage.removeItem(NAME_TOKEN);
+  };
+
+  const handleSignUp = async(data) => {
+    return await auth.signUp(data);
   };
 
   useEffect(() => {
@@ -43,6 +47,7 @@ function AuthProvider({ children }) {
         setAuthenticated,
         handleLogin,
         handleLogout,
+        handleSignUp,
       }}
     >
       {children}

@@ -8,11 +8,12 @@ export function useAuth() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
+
   async function signIn(data) {
     try {
-      setLoading(true)
-      setError('')
-      setData({})
+      setLoading(true);
+      setError('');
+      setData({});
       const headers = { 'Content-Type': 'application/json' };
       const body = JSON.stringify(data);
       const response = await fetch(apiUrl + '/signin', {
@@ -23,16 +24,45 @@ export function useAuth() {
       });
       if (response.ok) {
         const result = await response.json();
-        setData(result)
-        setError('')
+        setData(result);
+        setError('');
       } else {
-        setError(response.statusText)
+        setError(response.statusText);
       }
     } catch (error) {
-      console.log(error.message);
-      setError(error.message)
+      setError(error.message);
     } finally {
-      setLoading(false)
+      setLoading(false);
+    }
+  }
+
+  async function signUp(data) {
+    try {
+      setLoading(true);
+      setError('');
+      setData({});
+      const headers = { 'Content-Type': 'application/json' };
+      const body = JSON.stringify(data);
+      const response = await fetch(apiUrl + '/signup', {
+        method: 'POST',
+        headers,
+        body,
+        credentials: 'include',
+      });
+      if (response.ok) {
+        const result = await response.json();
+        setData(result);
+        setError('');
+      } else {
+        setError(response.statusText);
+        return ('error:', error)
+      }
+    } catch (error) {
+      setError(error.message);
+      return('error:', error)
+    } finally {
+      setLoading(false);
+      return ('success')
     }
   }
 
@@ -44,5 +74,6 @@ export function useAuth() {
     error,
     setError,
     signIn,
+    signUp,
   };
 }

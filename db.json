@@ -19,6 +19,42 @@
       "email": "z@g.com",
       "password": "$2a$10$paDh52ojsR.XmAXEXFUAZu1K4i4dT7Yjsg4.rr3OKKMObpXHN3PWG",
       "id": 4
+    },
+    {
+      "email": "a@a.com",
+      "password": "$2a$10$EqX/O7ocl110IWkP/Paz9OeM9uqmkeJvxG4XbPTbSjZXZnVjAVrHC",
+      "name": {
+        "first": "a",
+        "last": "a"
+      },
+      "id": 5
+    },
+    {
+      "email": "b@a.com",
+      "password": "$2a$10$OImaJ6IxiFAJSod9KT6cBelfX.X8hjfQf7YsvJpK0xrOefzoQESKS",
+      "name": {
+        "first": "a",
+        "last": "b"
+      },
+      "id": 6
+    },
+    {
+      "email": "wilson.romero@gmail.com",
+      "password": "$2a$10$8b3M9jSKVaFtM9uxtnAclucKCqzzIt7z8Lp0Rm1Rg3skRkStQltxy",
+      "name": {
+        "first": "Wilson",
+        "last": "Romero"
+      },
+      "id": 7
+    },
+    {
+      "email": "cesar@g.com",
+      "password": "$2a$10$pb9oXI8iPjV/2ACHZ3MrGe.4M/91cQ4gzW6cdXEIcSDzZQoU6V2t6",
+      "name": {
+        "first": "Cesar",
+        "last": "Galindo"
+      },
+      "id": 8
     }
   ]
 }
