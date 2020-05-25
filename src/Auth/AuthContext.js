@@ -5,8 +5,7 @@ const AuthContext = createContext();
 function AuthProvider({ children }) {
   const [authenticated, setAuthenticated] = useState(false);
 
-  const handleLogin = (e) => {
-    e.preventDefault();
+  const handleLogin = (data) => {
     setAuthenticated(true);
   };
 
@@ -16,7 +15,9 @@ function AuthProvider({ children }) {
   };
 
   return (
-    <AuthContext.Provider value={{ authenticated, setAuthenticated, handleLogin, handleLogout }}>
+    <AuthContext.Provider
+      value={{ authenticated, setAuthenticated, handleLogin, handleLogout }}
+    >
       {children}
     </AuthContext.Provider>
   );
