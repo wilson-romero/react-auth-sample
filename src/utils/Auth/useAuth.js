@@ -1,7 +1,7 @@
 import { useState } from 'react';
 const {
   config: { apiUrl },
-} = require('../config');
+} = require('../../config');
 
 export function useAuth() {
   const [data, setData] = useState({});

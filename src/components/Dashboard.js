@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
-import { AuthContext } from '../Auth/AuthContext';
+import { AuthContext } from '../utils/Auth/AuthContext';
 
 const Dashboard = (props) => {
   const { handleLogout } = useContext(AuthContext);
@@ -16,6 +16,9 @@ const Dashboard = (props) => {
       <button onClick={onSubmit}>Log Out</button>
       <p>
         <Link to='/register'>View register</Link>
+      </p>
+       <p>
+        <Link to='/users'>View Users</Link>
       </p>
     </div>
   );

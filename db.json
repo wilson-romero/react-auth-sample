@@ -1,60 +1,22 @@
 {
   "users": [
     {
-      "email": "olivier@mail.com",
-      "password": "$2a$10$GwfyXieooDh8iiFMbEtmOemXBX15Tme77BNNU3MIfmDUROXYKwdKm",
-      "id": 1
-    },
-    {
-      "email": "a@g.com",
-      "password": "$2a$10$s8o7P8aNNASOLRJK2HPMUut5JOY1LL3FibWE4cy89yhK9SAOQUWRu",
-      "id": 2
-    },
-    {
-      "email": "e@g.com",
-      "password": "$2a$10$pjVbyiBq/hwy7A02c.p7Bub6S.h.nn/838XLbWf0iQKE4BmhBUSUu",
-      "id": 3
-    },
-    {
-      "email": "z@g.com",
-      "password": "$2a$10$paDh52ojsR.XmAXEXFUAZu1K4i4dT7Yjsg4.rr3OKKMObpXHN3PWG",
-      "id": 4
-    },
-    {
       "email": "a@a.com",
-      "password": "$2a$10$EqX/O7ocl110IWkP/Paz9OeM9uqmkeJvxG4XbPTbSjZXZnVjAVrHC",
       "name": {
-        "first": "a",
-        "last": "a"
+        "first": "Albert",
+        "last": "Einstein"
       },
+      "password": "$2a$10$GvSOvTpoHpt19xhBLYCB5eSpETNDPoPnRDN3q2stDnMfD/lIevXoS",
       "id": 5
     },
     {
-      "email": "b@a.com",
-      "password": "$2a$10$OImaJ6IxiFAJSod9KT6cBelfX.X8hjfQf7YsvJpK0xrOefzoQESKS",
+      "email": "c@g.com",
+      "password": "$2a$10$YuiHiBQZHqA.tKrBaRt8He6MU1wM45JfP8qlkqLsFXYHM.WrbWPwS",
       "name": {
-        "first": "a",
-        "last": "b"
+        "first": "Carlos",
+        "last": "Alvarez"
       },
       "id": 6
-    },
-    {
-      "email": "wilson.romero@gmail.com",
-      "password": "$2a$10$8b3M9jSKVaFtM9uxtnAclucKCqzzIt7z8Lp0Rm1Rg3skRkStQltxy",
-      "name": {
-        "first": "Wilson",
-        "last": "Romero"
-      },
-      "id": 7
-    },
-    {
-      "email": "cesar@g.com",
-      "password": "$2a$10$pb9oXI8iPjV/2ACHZ3MrGe.4M/91cQ4gzW6cdXEIcSDzZQoU6V2t6",
-      "name": {
-        "first": "Cesar",
-        "last": "Galindo"
-      },
-      "id": 8
     }
   ]
 }

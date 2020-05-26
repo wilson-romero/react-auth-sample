@@ -7,10 +7,12 @@ import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 import Unauthorized from './components/Unauthorized';
 import Register from './components/Register';
-import Message from './Messages';
+import Users from './components/Users';
+import User from './components/User';
+import Message from './utils/Messages';
 
-import { AuthProvider } from './Auth/AuthContext';
-import { MessageProvider } from './Messages/MessageContext';
+import { AuthProvider } from './utils/Auth/AuthContext';
+import { MessageProvider } from './utils/Messages/MessageContext';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
             <Route exact path='/login' component={Login} />
             <ProtectedRoute exact path='/dashboard' component={Dashboard} />
             <ProtectedRoute exact path='/register' component={Register} />
+            <ProtectedRoute exact path='/users' component={Users} />
+            <ProtectedRoute exact path='/user/:id' component={User} />
             <Route exact path='/unauthorized' component={Unauthorized} />
           </Router>
           <Message />

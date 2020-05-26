@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
-import { AuthContext } from '../Auth/AuthContext';
-import { MessageContext } from '../Messages/MessageContext';
+import { AuthContext } from '../utils/Auth/AuthContext';
+import { MessageContext } from '../utils/Messages/MessageContext';
 
 
 export default function Register() {
@@ -44,6 +44,9 @@ export default function Register() {
       </form>
       <p>
         <Link to='/dashboard'>View Dashboard</Link>
+      </p>
+      <p>
+        <Link to='/users'>View users</Link>
       </p>
     </>
   );

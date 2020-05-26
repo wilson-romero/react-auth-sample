@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useContext, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-import { AuthContext } from '../Auth/AuthContext';
-import { MessageContext } from '../Messages/MessageContext';
+import { AuthContext } from '../utils/Auth/AuthContext';
+import { MessageContext } from '../utils/Messages/MessageContext';
 
 import { Link, useHistory, withRouter } from 'react-router-dom';
 
